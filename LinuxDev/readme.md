@@ -1,5 +1,7 @@
 # X11 server-enabled Linux development envirnment
 
+[![dockeri.co](https://dockerico.blankenship.io/image/archfx/linuxdev)](https://hub.docker.com/r/archfx/linuxdev)
+
 Pull directly from the Docker-Hub
 ```shell
 docker pull archfx/linuxdev
