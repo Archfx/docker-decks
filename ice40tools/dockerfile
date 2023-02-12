@@ -1,4 +1,4 @@
-FROM ubuntu:latest as builder
+FROM ubuntu:20.04 as builder
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -21,7 +21,6 @@ RUN apt-get update && apt-get install -y \
 	graphviz \
     xdot \
     pkg-config \
-    python3 \
     libboost-system-dev \
 	libboost-python-dev \
     libboost-filesystem-dev \
@@ -35,7 +34,6 @@ RUN apt-get update && apt-get install -y \
     mercurial graphviz \
     xdot \
     pkg-config \
-    python3-pip \
     libftdi-dev \
     qtbase5-dev \
     qtchooser \
@@ -60,10 +58,4 @@ RUN cd cmake-3.13.4; ./bootstrap ;make ;make install
 
 RUN git clone https://github.com/YosysHQ/nextpnr nextpnr 
 RUN cd nextpnr; cmake -DARCH=ice40 -DCMAKE_INSTALL_PREFIX=/usr/local; make -j$(nproc); make install
-
-
-
-# RUN apt-get install -y \
-#     iverilog \
-#     gtkwave
 
