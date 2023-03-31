@@ -15,4 +15,4 @@ jupyter notebook --ip 0.0.0.0 --no-browser --allow-root
 
 Click on the link that appers on the container terminal.
 
-Enjoy codeing!
+Enjoy coding!
