@@ -12,12 +12,24 @@ RUN apt-get update && apt-get install -y \
     wget \
     python3 \
     racket \
-    libssl-dev
-
+    libssl-dev \
+    libzmq5 \
+    python3-pip
+    
  
-# RUN git clone https://github.com/Z3Prover/z3.git
-# WORKDIR /z3
-# RUN python3 scripts/mk_make.py
-# RUN cd build; make
-# RUN  yes | raco pkg install racket-doc
-RUN  yes | raco pkg install rosette ; exit 0
+RUN pip3 install notebook
+
+RUN raco setup --doc-index --force-user-docs
+
+RUN  yes | raco pkg install rosette 
+
+RUN git clone https://github.com/anishathalye/rtlv
+WORKDIR /rtlv
+
+RUN yes | raco pkg install 
+
+RUN yes | raco pkg install iracket
+
+RUN yes | raco iracket install 
+
+
