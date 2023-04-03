@@ -2,6 +2,8 @@ FROM ubuntu:latest as builder
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+
+
 RUN apt-get update && apt-get install -y \
     build-essential \
     zlib1g-dev \
@@ -31,5 +33,8 @@ RUN yes | raco pkg install
 RUN yes | raco pkg install iracket
 
 RUN yes | raco iracket install 
+
+RUN sed -i 's/"--",/"--","-t",/g' /root/.local/share/jupyter/kernels/racket/kernel.json
+
 
 

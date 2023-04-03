@@ -1,5 +1,5 @@
 This is a complete Racket image with rosette. And configured to work with jupyter notebook.
-
+You can find the full tutorial [here](https://archfx.github.io/posts/2023/04/racketutes1/).
 
 Run the docker container by
 
