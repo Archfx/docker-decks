@@ -1,0 +1,12 @@
+FROM archfx/rv32i:latest as builder
+
+RUN apt-get update && apt-get install -y  device-tree-compiler
+
+# Spike sim
+RUN git clone 'https://github.com/riscv/riscv-isa-sim.git' && \
+    cd riscv-isa-sim && \
+    mkdir build && cd build && \
+    ../configure --prefix=/opt/riscv32i && \
+    make && make install && \
+    ln -s /opt/riscv32i/bin/spike /usr/bin/spike
+
