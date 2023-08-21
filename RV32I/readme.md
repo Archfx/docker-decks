@@ -1,4 +1,4 @@
-# Tool chain for PicoRV32 - A Size-Optimized RISC-V CPU
+# Tool chain for Risc-V32
 
 
 [![dockeri.co](https://dockerico.blankenship.io/image/archfx/rv32i)](https://hub.docker.com/r/archfx/rv32i)
@@ -18,3 +18,11 @@ sudo docker run -t -p 6080:6080 -v "${PWD}/:/$LOC" -w /$LOC --name rv32i archfx/
 ```
 
 PicoRV repo : https://github.com/YosysHQ/picorv32
+
+
+## Simulation
+
+There are two simulation options with Spike simulator and QEMU.
+
+- Find the spike simulator at `archfx/rv32i:spike`
+- Find the QEMU simulator at `archfx/rv32i:qemu`
