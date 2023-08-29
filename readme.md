@@ -9,7 +9,7 @@ Important Docker Images to run linux environments (Focued to run nativly on Appl
     - light 
     - qemu : version with the QEMU simulator
 * [LinuxDev](https://github.com/Archfx/docker-decks/tree/master/LinuxDev) : GUI supported linux environemt
-* [rosette](https://github.com/Archfx/docker-decks/tree/master/rosette) : +racket +jupyter +z3 all in one
+* [rosette](https://github.com/Archfx/docker-decks/tree/master/rosette) : +racket +jupyter +z3 all in one formal verification framework
 * [Ice40Tools](https://github.com/Archfx/docker-decks/tree/master/ice40tools) : Full toolchain for open source ICE40 FPGAs.
 
 ### Build Status
