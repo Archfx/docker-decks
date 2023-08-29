@@ -37,5 +37,6 @@ RUN yes | raco iracket install
 
 RUN sed -i 's/"--",/"--","-t",/g' /root/.local/share/jupyter/kernels/racket/kernel.json
 
-
+RUN rm -r rosette
+RUN rm -r rtlv
 
