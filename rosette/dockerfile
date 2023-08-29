@@ -27,8 +27,12 @@ RUN git clone https://github.com/emina/rosette.git
 WORKDIR /rosette
 RUN yes | raco pkg install 
 
-RUN git clone https://github.com/anishathalye/rtlv
-WORKDIR /rtlv
+# RUN git clone https://github.com/anishathalye/rtlv
+# WORKDIR /rtlv
+# RUN yes | raco pkg install 
+
+RUN git clone https://github.com/anishathalye/knox
+WORKDIR /knox/yosys
 RUN yes | raco pkg install 
 
 RUN yes | raco pkg install iracket
@@ -38,5 +42,5 @@ RUN yes | raco iracket install
 RUN sed -i 's/"--",/"--","-t",/g' /root/.local/share/jupyter/kernels/racket/kernel.json
 
 RUN rm -r rosette
-RUN rm -r rtlv
+RUN rm -r knox
 
