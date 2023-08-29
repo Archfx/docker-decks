@@ -1,9 +1,9 @@
-name: rv64gcc-latest
+name: rv64-latest
 
 on:
   push:
     paths:
-    - 'rv64gcc/dockerfile'
+    - 'rv64/dockerfile'
 
 jobs:
 
@@ -20,9 +20,9 @@ jobs:
     - uses: mr-smithers-excellent/docker-build-push@v6
       name: Build & push Docker image
       with:
-        image: archfx/rv64gcc
+        image: archfx/rv64
         tags: v1, latest
         registry: docker.io
-        dockerfile: rv64gcc/dockerfile
+        dockerfile: rv64/dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
