@@ -17,8 +17,8 @@ Important Docker Images to run linux environments (Focued to run nativly on Appl
 | Container  |  tag |  status | docker-hub |
 |:-:|:-:|:-:|:-:|
 | YosysTools  | latest  |   | [archfx/yosystools](https://hub.docker.com/repository/docker/archfx/yosystools/general) |
-|  RV32I      | light   | [![rv32i-latest](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-rv32i.yml/badge.svg)](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-rv32i.yml)  | [archfx/rv32i:latest](https://hub.docker.com/repository/docker/archfx/rv32i/general) |
-|  RV32I      |  qumu   |   | [archfx/rv32i:qemu](https://hub.docker.com/repository/docker/archfx/rv32i/general)|
+|  rv64     | light   | [![rv64-latest](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-rv64.yml/badge.svg)](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-rv64.yml)  | [archfx/rv64:latest](https://hub.docker.com/repository/docker/archfx/rv32i/general) |
+|  rv64     |  qumu   |   | [archfx/rv64:qemu](https://hub.docker.com/repository/docker/archfx/rv32i/general)|
 |  LinuxDev | latest  |  [![LinuxDev](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-linuxdev.yml/badge.svg)](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-linuxdev.yml) | [archfx/linuxdev](https://hub.docker.com/repository/docker/archfx/rv32i/general) |
 |  rosette | latest  | [![rosette](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-rosette.yml/badge.svg)](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-rosette.yml)  | [archfx/rosette](https://hub.docker.com/repository/docker/archfx/rv32i/general) |
 |  ice40tools | latest  | [![ice40tools](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-ice40tools.yml/badge.svg)](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-ice40tools.yml)  | [archfx/ice40tools](https://hub.docker.com/repository/docker/archfx/ice40tools/general) |
