@@ -15,4 +15,4 @@ RUN cd riscv-gnu-toolchain-rv32i; mkdir build; cd build;  ../configure --with-ar
 
 ENV PATH="$PATH:/opt/riscv32i/bin"
 
-RUN rm -r riscv-gnu-toolchain-rv32i
+RUN rm -r riscv-gnu-toolchain-rv32i # clean downloaded files
