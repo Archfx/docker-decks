@@ -22,7 +22,7 @@ jobs:
       with:
         image: archfx/rv32i
         tags: v1, latest
-        registry: registry-url.io
-        dockerfile: Dockerfile.ci
+        registry: docker.io
+        dockerfile: RV32I/dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
