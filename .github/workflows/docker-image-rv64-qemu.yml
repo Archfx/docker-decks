@@ -1,4 +1,4 @@
-name: rv64-latest
+name: rv64-qemu
 
 on:
   push:
