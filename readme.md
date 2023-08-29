@@ -16,7 +16,7 @@ Important Docker Images to run linux environments (Focued to run nativly on Appl
 
 | Container  |  tag |  status | docker-hub |
 |:-:|:-:|:-:|:-:|
-| YosysTools  | latest  |   | [archfx/yosystools](https://hub.docker.com/repository/docker/archfx/yosystools/general) |
+| YosysTools  | latest  | [![yosystools](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-yosystools.yml/badge.svg)](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-yosystools.yml)  | [archfx/yosystools](https://hub.docker.com/repository/docker/archfx/yosystools/general) |
 |  rvutils     | light   | [![rvutils-latest](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-rvutils.yml/badge.svg)](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-rvutils.yml)  | [archfx/rvutils:latest](https://hub.docker.com/repository/docker/archfx/rvutils/general) |
 |  rvutils     |  qumu   |  [![rvutils-qemu](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-rvutils-qemu.yml/badge.svg)](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-rvutils-qemu.yml) | [archfx/rvutils:qemu](https://hub.docker.com/repository/docker/archfx/rvutils/general)|
 |  LinuxDev | latest  |  [![LinuxDev](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-linuxdev.yml/badge.svg)](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-linuxdev.yml) | [archfx/linuxdev](https://hub.docker.com/repository/docker/archfx/rv32i/general) |
