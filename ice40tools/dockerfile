@@ -59,3 +59,8 @@ RUN cd cmake-3.13.4; ./bootstrap ;make ;make install
 RUN git clone https://github.com/YosysHQ/nextpnr nextpnr 
 RUN cd nextpnr; cmake -DARCH=ice40 -DCMAKE_INSTALL_PREFIX=/usr/local; make -j$(nproc); make install
 
+RUN rm -r yosys
+RUN rm -r icestorm
+RUN rm -r cmake-3.13.4.tar.gz
+RUN rm -r cmake-3.13.4
+RUN rm -r nextpnr
