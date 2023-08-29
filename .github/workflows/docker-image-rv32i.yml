@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: rv32i-latest
 
 on:
   push:
@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v3
+      name: Check out code
     # - uses: actions/checkout@v3
     # - name: RV32I latest - Build the Docker image
     #   run: docker build . --file RV32I/dockerfile --tag archfx/rv32i:latest
