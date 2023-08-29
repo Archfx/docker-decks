@@ -1,4 +1,4 @@
-# X11 server-enabled Linux development envirnment
+# X11 server-enabled Linux Hardware development environment 
 
 [![dockeri.co](https://dockerico.blankenship.io/image/archfx/yosystools)](https://hub.docker.com/r/archfx/yosystools)
 
