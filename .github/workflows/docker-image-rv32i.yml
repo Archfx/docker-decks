@@ -13,5 +13,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
+    - name: RV32I latest - Build the Docker image
       run: docker build . --file RV32I/dockerfile --tag archfx/rv32i:latest
