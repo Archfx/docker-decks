@@ -14,11 +14,9 @@ RUN git clone https://github.com/microsoft/surface-duo-oss-kernel.manifest repo;
 
 RUN wget  "drive.google.com/u/3/uc?id=1e-EnwGDjHZGaicTeFojpaPgQqC4WRgiZ&export=download&confirm=yes" -O snapdragon-llvm-8.0.6-linux64.tar.gz
 
-RUN tar -xf snapdragon-llvm-8.0.6-linux64.tar.gz
+RUN tar -xf snapdragon-llvm-8.0.6-linux64.tar.gz -C llvm
 
-RUN rm -r snapdragon-llvm-8.0.6-linux64.tar.gz
-
-RUN mkdir -p ~/repo/proprietary/llvm-arm-toolchain-ship/8.0; cp -r ~/snapdragon-llvm-8.0.6-linux64/./toolchains/llvm-Snapdragon_LLVM_for_Android_8.0/prebuilt/linux-x86_64/* ~/repo/proprietary/llvm-arm-toolchain-ship/8.0/
+RUN mkdir -p ~/repo/proprietary/llvm-arm-toolchain-ship/8.0; cp -r ~/llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_8.0/prebuilt/linux-x86_64/* ~/repo/proprietary/llvm-arm-toolchain-ship/8.0/
 
 RUN export BUILD_CONFIG=./kernel/msm-4.14/build.config.perf-config; build/build.sh
 
