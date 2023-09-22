@@ -5,10 +5,15 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y \
     git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 \
     lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip libssl-dev libxml-simple-perl \
-    libc++1 libc++-dev python bc filter
+    libc++1 libc++-dev python bc filter wget
 
 
 RUN mkdir ~/bin; PATH=~/bin:$PATH ;curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo; chmod a+x ~/bin/repo
 
-RUN git clone https://github.com/microsoft/surface-duo-oss-kernel.manifest; cd surface-duo-oss-kernel.manifest;  git checkout surfaceduo/11/2022.902.48;
+RUN git clone https://github.com/microsoft/surface-duo-oss-kernel.manifest repo; cd repo;  git checkout surfaceduo/11/2022.902.48;
 
+RUN wget https://developer.qualcomm.com/qfile/66877/snapdragon-llvm-8.0.6-linux64.tar.gz; tar -xvzf snapdragon-llvm-8.0.6-linux64.tar.gz llvm
+
+RUN mkdir -p ~/repo/proprietary/llvm-arm-toolchain-ship/8.0; cp -r ~/llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_8.0/prebuilt/linux-x86_64/* ~/repo/proprietary/llvm-arm-toolchain-ship/8.0/
+
+RUN export BUILD_CONFIG=./kernel/msm-4.14/build.config.perf-config; build/build.sh
