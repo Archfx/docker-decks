@@ -12,7 +12,7 @@ RUN mkdir ~/bin; PATH=~/bin:$PATH ;curl https://storage.googleapis.com/git-repo-
 
 RUN git clone https://github.com/microsoft/surface-duo-oss-kernel.manifest repo; cd repo;  git checkout surfaceduo/11/2022.902.48;
 
-RUN wget "https://drive.google.com/uc?export=download&id=1e-EnwGDjHZGaicTeFojpaPgQqC4WRgiZ"; tar -xvzf snapdragon-llvm-8.0.6-linux64.tar.gz llvm
+RUN wget "drive.google.com/u/3/uc?id=1e-EnwGDjHZGaicTeFojpaPgQqC4WRgiZ&export=download&confirm=yes"; tar -xvzf snapdragon-llvm-8.0.6-linux64.tar.gz llvm
 
 RUN mkdir -p ~/repo/proprietary/llvm-arm-toolchain-ship/8.0; cp -r ~/llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_8.0/prebuilt/linux-x86_64/* ~/repo/proprietary/llvm-arm-toolchain-ship/8.0/
 
