@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     libc++1 libc++-dev python bc filter wget
 
 
-RUN mkdir ~/bin; PATH=~/bin:$PATH ; curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo; chmod a+x ~/bin/repo
+RUN PATH=~/bin:$PATH ; curl https://storage.googleapis.com/git-repo-downloads/repo > /bin/repo; chmod a+x /bin/repo
 
 # RUN git clone https://github.com/microsoft/surface-duo-oss-kernel.manifest repo; cd repo;  git checkout surfaceduo/11/2022.902.48;
 
