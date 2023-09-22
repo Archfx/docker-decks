@@ -12,4 +12,4 @@ RUN mkdir ~/bin; PATH=~/bin:$PATH ;curl https://storage.googleapis.com/git-repo-
 
 RUN mkdir ~/repo; cd ~/repo; repo init -u https://github.com/microsoft/surface-duo-oss-kernel.manifest -b surfaceduo/10/2020.618.244; repo sync
 
-RUN mkdir -p ~/repo/proprietary/llvm-arm-toolchain-ship/8.0;
+# RUN mkdir -p ~/repo/proprietary/llvm-arm-toolchain-ship/8.0;
