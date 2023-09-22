@@ -12,7 +12,7 @@ RUN PATH=~/bin:$PATH ; curl https://storage.googleapis.com/git-repo-downloads/re
 
 # RUN git clone https://github.com/microsoft/surface-duo-oss-kernel.manifest repo; cd repo;  git checkout surfaceduo/11/2022.902.48;
 
-RUN cd ~/repo; repo init -u https://github.com/microsoft/surface-duo-oss-kernel.manifest -b surfaceduo/11/2022.902.48 ; repo sync
+RUN mkdir repo cd /repo; repo init -u https://github.com/microsoft/surface-duo-oss-kernel.manifest -b surfaceduo/11/2022.902.48 ; repo sync
 
 RUN wget  "drive.google.com/u/3/uc?id=1e-EnwGDjHZGaicTeFojpaPgQqC4WRgiZ&export=download&confirm=yes" -O snapdragon-llvm-8.0.6-linux64.tar.gz
 
