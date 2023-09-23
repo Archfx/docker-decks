@@ -23,5 +23,5 @@ RUN mkdir -p ~/repo/proprietary/llvm-arm-toolchain-ship/8.0; cp -r /llvm/toolcha
 
 RUN rm -r /llvm
 
-RUN export BUILD_CONFIG=./repo/kernel/msm-4.14/build.config.perf-config; ./repo/build/build.sh
+RUN cd repo; export BUILD_CONFIG=./kernel/msm-4.14/build.config.perf-config; /build/build.sh
 
