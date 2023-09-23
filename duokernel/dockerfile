@@ -19,7 +19,7 @@ RUN mkdir llvm; tar -xf snapdragon-llvm-8.0.6-linux64.tar.gz -C /llvm
 
 RUN rm -r snapdragon-llvm-8.0.6-linux64.tar.gz
 
-RUN mkdir -p ~/repo/proprietary/llvm-arm-toolchain-ship/8.0; cp -r /llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_8.0/prebuilt/linux-x86_64/* ~/repo/proprietary/llvm-arm-toolchain-ship/8.0/
+RUN mkdir -p repo/proprietary/llvm-arm-toolchain-ship/8.0; cp -r /llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_8.0/prebuilt/linux-x86_64/* repo/proprietary/llvm-arm-toolchain-ship/8.0/
 
 RUN rm -r /llvm
 
