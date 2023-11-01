@@ -1,4 +1,4 @@
-FROM ubuntu:20.04 as builder
+FROM archfx/ubuntu:latest as builder
 
 ARG DEBIAN_FRONTEND=noninteractive
 
