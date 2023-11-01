@@ -8,7 +8,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 #     gperf libtool patchutils bc zlib1g-dev git libexpat1-dev 
 
 RUN apt-get update && apt-get install -y \
-        git wget iverilog libmpc-dev
+        git wget iverilog libmpc-dev verilator
 RUN mkdir /opt/riscv
 
 RUN wget https://github.com/stnolting/riscv-gcc-prebuilt/releases/download/rv64imc-3.0.0/riscv64-unknown-elf.gcc-12.1.0.tar.gz
