@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: set release date
+      run: | 
+        echo "DATE=$(date +"%Y%m%d")" >> ${GITHUB_ENV}
     - uses: actions/checkout@v3
       name: Check out code
  
@@ -19,7 +22,7 @@ jobs:
       name: Build & push Docker image
       with:
         image: archfx/linuxdev
-        tags: v1, latest
+        tags: latest, $DATE
         registry: docker.io
         dockerfile: LinuxDev/dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
