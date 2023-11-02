@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
     xmlstarlet virtualenv xz-utils rr jq libncurses5 pngcrush lib32ncurses5-dev git-lfs libxml2 \
     openjdk-11-jdk-headless ccache
 
+RUN apt autoremove -y python3
+
 RUN curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py; python get-pip.py; pip2 install lunch ; pip2 install twisted
 
 
