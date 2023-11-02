@@ -3,5 +3,5 @@
 Minimum Docker Configuration Reqirements:
 
 - Ram : 16 GiB
-- Swap : 6 GiB
+- Swap : 4 GiB
 - Disk : 128 GiB
