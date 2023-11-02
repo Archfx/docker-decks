@@ -23,4 +23,4 @@ RUN apt-get update && apt-get install -y \
 RUN pip install lunch; pip install twisted
 
 
-RUN PATH=~/bin:$PATH ; curl https://storage.googleapis.com/git-repo-downloads/repo-1 > /bin/repo; chmod a+x /bin/repo
+RUN PATH=~/bin:$PATH ; curl https://storage.googleapis.com/git-repo-downloads/repo > /bin/repo; chmod a+x /bin/repo
