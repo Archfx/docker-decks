@@ -14,4 +14,4 @@ RUN apt autoremove -y python3
 RUN curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py; python get-pip.py; pip2 install lunch ; pip2 install twisted
 
 
-RUN PATH=~/bin:$PATH ; curl https://storage.googleapis.com/git-repo-downloads/repo > /bin/repo; chmod a+x /bin/repo
+RUN PATH=~/bin:$PATH ; curl https://storage.googleapis.com/git-repo-downloads/repo-1 > /bin/repo; chmod a+x /bin/repo
