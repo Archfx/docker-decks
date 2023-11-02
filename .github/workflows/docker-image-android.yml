@@ -21,7 +21,7 @@ jobs:
       name: Build & push Docker image
       with:
         image: archfx/android
-        tags: latest
+        tags: latest, ${{ steps.date.outputs.date }}
         registry: docker.io
         dockerfile: android/dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
