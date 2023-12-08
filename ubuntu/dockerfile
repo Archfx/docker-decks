@@ -12,5 +12,4 @@ RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip
     
-
-RUN echo -e 'echo -e "\\033[0;34m                        .__     ___________         \\033[0;34m\\\\\n\\033[0;34m_____   _______   ____  |  |__  \\_   _____/___  ___ \\033[0;34m\\\\\n\\033[0;34m\\__  \\  \\_  __ \\_/ ___\\ |  |  \\  |    __)  \\  \\/  / \\033[0;34m\\\\\n\\033[0;34m / __ \\_ |  | \\/\\  \\___ |   Y  \\ |     \\    >    <  \\033[0;34m\\\\\n\\033[0;34m(____  / |__|    \\___  >|___|  / \\___  /   /__/> \\ \\033[0;34m\\\\\n\\033[0;34m     \\/              \\/      \\/      \\/           \\/  \\033[0m"' >> ~/.bashrc
+RUN wget -o archfx https://raw.githubusercontent.com/Archfx/archfx/main/images/banner.txt;  cat archfx >> ~/.bashrc ; rm archfx
