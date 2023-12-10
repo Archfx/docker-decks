@@ -2,11 +2,6 @@ FROM archfx/ubuntu:latest as builder
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-# RUN apt-get update && apt-get install -y \
-#     autoconf automake autotools-dev curl libmpc-dev \
-#         libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo \
-#     gperf libtool patchutils bc zlib1g-dev git libexpat1-dev 
-
 RUN apt-get update && apt-get install -y \
         git wget iverilog libmpc-dev verilator pip
 RUN mkdir /opt/riscv
@@ -16,10 +11,6 @@ RUN tar -xzf riscv64-unknown-elf.gcc-12.1.0.tar.gz -C /opt/riscv/
 
 RUN wget https://github.com/stnolting/riscv-gcc-prebuilt/releases/download/rv32i-4.0.0/riscv32-unknown-elf.gcc-12.1.0.tar.gz
 RUN tar -xzf riscv32-unknown-elf.gcc-12.1.0.tar.gz -C /opt/riscv/
-
-# RUN git clone https://github.com/riscv/riscv-gnu-toolchain riscv-gnu-toolchain-rv32i
-# RUN cd riscv-gnu-toolchain-rv32i; git submodule update --init --recursive
-# RUN cd riscv-gnu-toolchain-rv32i; mkdir build; cd build;  ../configure --with-arch=rv32i --prefix=/opt/riscv32i; make -j$(nproc)
 
 
 ENV PATH="$PATH:/opt/riscv/bin"
