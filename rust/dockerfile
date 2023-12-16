@@ -1,4 +1,4 @@
-FROM archfx/ubuntu as builder
+FROM archfx/rvutils as builder
     
 RUN pip3 install notebook
 
