@@ -10,7 +10,6 @@ RUN apt-get update && apt-get install -y \
     autoconf \
     git \
     wget \
-    python3.9 \
     build-essential \
     clang bison flex \
 	libreadline-dev \
@@ -63,7 +62,7 @@ RUN tar zxvf cmake-3.13.4.tar.gz
 RUN cd cmake-3.13.4; ./bootstrap ;make ;make install
 
 RUN git clone https://github.com/YosysHQ/nextpnr nextpnr 
-RUN cd nextpnr; cmake . -DARCH=ice40 -DICESTORM_INSTALL_PREFIX=/usr/local ; make -j$(nproc); make install
+RUN cd nextpnr; cmake . -DARCH=ice40 -DICESTORM_INSTALL_PREFIX=/usr ; make -j$(nproc); make install
 
 
 RUN rm -r yosys
