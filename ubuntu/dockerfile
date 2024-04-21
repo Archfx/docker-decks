@@ -11,4 +11,4 @@ RUN apt-get update && apt-get install -y \
     python3-pip
     
 RUN wget -O archfx https://raw.githubusercontent.com/Archfx/archfx/main/images/graffiti.txt;  cat archfx >> ~/.bashrc ; rm archfx
-RUN sed -i 's/# force_color_prompt=yes/force_color_prompt=yes/' /root/.bashrc
+RUN sed -i 's/# force_color_prompt=yes/force_color_prompt=yes/' ~/.bashrc
