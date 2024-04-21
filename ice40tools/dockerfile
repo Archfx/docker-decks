@@ -64,3 +64,4 @@ RUN rm -r icestorm
 RUN rm -r cmake-3.13.4.tar.gz
 RUN rm -r cmake-3.13.4
 RUN rm -r nextpnr
+
