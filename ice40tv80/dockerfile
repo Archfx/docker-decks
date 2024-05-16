@@ -1,0 +1,10 @@
+FROM archfx/ubuntu:latest as builder
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y \
+    yosys arachne-pnr fpga-icestorm \
+    iverilog gtkwave \
+    sdcc sdcc-doc sdcc-libraries sdcc-ucsim z80asm z80dasm srecord
+
+
