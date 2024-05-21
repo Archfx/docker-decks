@@ -80,22 +80,22 @@ RUN git clone 'https://github.com/emina/rosette.git' && \
     cd rosette && git checkout ${ROSETTE_VERSION} && \
     raco pkg install --auto -i --no-setup && raco setup -Dl rosette
 
-# Install riscv-fesvr
-RUN git clone 'https://github.com/riscv/riscv-fesvr.git' && \
-    cd riscv-fesvr && \
-    mkdir build && \
-    cd build && \
-    ../configure --prefix=/opt/riscv --target=riscv64-unknown-elf && \
-    make -j4 && \
-    make install 
+# # Install riscv-fesvr
+# RUN git clone 'https://github.com/riscv/riscv-fesvr.git' && \
+#     cd riscv-fesvr && \
+#     mkdir build && \
+#     cd build && \
+#     ../configure --prefix=/opt/riscv --target=riscv64-unknown-elf && \
+#     make -j4 && \
+#     make install 
 
-# Install Spike
-RUN git clone 'https://github.com/riscv/riscv-isa-sim.git' && \
-    cd riscv-isa-sim && \
-    mkdir build && cd build && \
-    ../configure --prefix=/opt/riscv --with-fesvr=/opt/riscv && \
-    make -j4 && make install && \
-    ln -s /opt/riscv/bin/spike /usr/bin/spike
+# # Install Spike
+# RUN git clone 'https://github.com/riscv/riscv-isa-sim.git' && \
+#     cd riscv-isa-sim && \
+#     mkdir build && cd build && \
+#     ../configure --prefix=/opt/riscv --with-fesvr=/opt/riscv && \
+#     make -j4 && make install && \
+#     ln -s /opt/riscv/bin/spike /usr/bin/spike
 
 RUN pip install parcon
 
