@@ -49,7 +49,7 @@ RUN apt-get update && apt-get install -y \
     vim \
     wget \
     zlib1g-dev \
-    libzmq5 \
+    libzmq5 
 #  && rm -rf /var/lib/apt/lists/*
 
 
