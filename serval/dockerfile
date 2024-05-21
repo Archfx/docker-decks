@@ -97,7 +97,7 @@ RUN git clone 'https://github.com/emina/rosette.git' && \
 #     make -j4 && make install && \
 #     ln -s /opt/riscv/bin/spike /usr/bin/spike
 
-RUN pip install parcon
+RUN pip3 install parcon
 
 RUN git clone https://github.com/archfx/serval
 WORKDIR /serval
