@@ -51,7 +51,7 @@ RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     libzmq5  \
     libssl-dev \
-    device-tree-compiler libboost-regex-dev
+    device-tree-compiler libboost-regex-dev libboost-all-dev
 
 
 
