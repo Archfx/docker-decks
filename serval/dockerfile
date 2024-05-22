@@ -50,7 +50,8 @@ RUN apt-get update && apt-get install -y \
     wget \
     zlib1g-dev \
     libzmq5  \
-    libssl-dev
+    libssl-dev \
+    device-tree-compiler libboost-regex-dev
 
 
 
@@ -88,6 +89,13 @@ RUN git clone 'https://github.com/emina/rosette.git' && \
 #     ../configure --prefix=/opt/riscv --target=riscv64-unknown-elf && \
 #     make -j4 && \
 #     make install 
+RUN git clone 'https://github.com/riscv-software-src/riscv-isa-sim' && \
+    cd riscv-isa-sim && \
+    mkdir build && \
+    cd build && \
+    ../configure --prefix=/opt/riscv && \
+    make && \
+    make install 
 
 # # Install Spike
 # RUN git clone 'https://github.com/riscv/riscv-isa-sim.git' && \
