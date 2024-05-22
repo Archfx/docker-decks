@@ -62,7 +62,7 @@ RUN git clone 'https://github.com/boolector/boolector.git' && \
     ./configure.sh --prefix /opt/boolector/${BOOLECTOR_VERSION}-lingeling && cd build && make -j $(nproc) && make install && \
     cd ../.. && rm -rfv ./boolector
 
-Install Z3
+#Install Z3
 RUN git clone 'https://github.com/Z3Prover/z3.git' && \
     cd z3 && git checkout z3-${Z3_VERSION} && \
     python3 scripts/mk_make.py --prefix /opt/z3/${Z3_VERSION} && \
