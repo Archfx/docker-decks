@@ -75,7 +75,7 @@ RUN git clone 'https://github.com/boolector/boolector.git' && \
 #     cd rosette && git checkout ${ROSETTE_VERSION} && \
 #     raco pkg install --auto -i --no-setup && raco setup -Dl rosette
 
-RUN raco pkg install rosette
+RUN raco pkg install custom-load rfc6455 rosette
     
 RUN git clone https://github.com/uw-unsat/serval
 WORKDIR /serval
