@@ -33,10 +33,10 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     vim \
     wget \
     zlib1g-dev \
-    libzmq5 \
- && rm -rf /var/lib/apt/lists/*
+    libzmq5   libssl-dev \
+    device-tree-compiler libboost-regex-dev libboost-all-dev z3
 
-
+RUN rm /usr/lib/python3.*/EXTERNALLY-MANAGED
 
 # Install Racket
 RUN wget "https://mirror.racket-lang.org/installers/${RACKET_VERSION}/racket-${RACKET_VERSION}-x86_64-linux-cs.sh" && \
@@ -63,17 +63,19 @@ RUN git clone 'https://github.com/boolector/boolector.git' && \
     cd ../.. && rm -rfv ./boolector
 
 # Install Z3
-RUN git clone 'https://github.com/Z3Prover/z3.git' && \
-    cd z3 && git checkout z3-${Z3_VERSION} && \
-    python3 scripts/mk_make.py --prefix /opt/z3/${Z3_VERSION} && \
-    cd build && \
-    make -j $(nproc) && make install && \
-    cd .. && rm -rfv z3
+# RUN git clone 'https://github.com/Z3Prover/z3.git' && \
+#     cd z3 && git checkout z3-${Z3_VERSION} && \
+#     python3 scripts/mk_make.py --prefix /opt/z3/${Z3_VERSION} && \
+#     cd build && \
+#     make -j $(nproc) && make install && \
+#     cd .. && rm -rfv z3
 
 # Install Rosette
-RUN git clone 'https://github.com/emina/rosette.git' && \
-    cd rosette && git checkout ${ROSETTE_VERSION} && \
-    raco pkg install --auto -i --no-setup && raco setup -Dl rosette
+# RUN git clone 'https://github.com/emina/rosette.git' && \
+#     cd rosette && git checkout ${ROSETTE_VERSION} && \
+#     raco pkg install --auto -i --no-setup && raco setup -Dl rosette
+
+raco pkg install rosette
     
 RUN git clone https://github.com/uw-unsat/serval
 WORKDIR /serval
