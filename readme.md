@@ -11,6 +11,7 @@ Important Docker Images to run linux environments (Focued to run nativly on Appl
 * [linuxdev](https://github.com/Archfx/docker-decks/tree/master/LinuxDev) : GUI supported linux environemt
 * [rosette](https://github.com/Archfx/docker-decks/tree/master/rosette) : +racket +jupyter +z3 all in one formal verification framework
 * [ice40tools](https://github.com/Archfx/docker-decks/tree/master/ice40tools) : Full toolchain for open source ICE40 FPGAs.
+* [serval](https://github.com/Archfx/docker-decks/tree/master/serval) : [Unsat Serval](https://unsat.cs.washington.edu/projects/serval/) simbolic simulation tool inside a container (written in Racket).
 
 ### Build Status
 
@@ -26,5 +27,6 @@ Build status of the each image. Built images can be found at [docker.io/archfx](
 |  rosette | latest  | [![rosette](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-rosette.yml/badge.svg)](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-rosette.yml)  | [archfx/rosette](https://hub.docker.com/repository/docker/archfx/rv32i/general) |
 |  ice40tools | latest  | [![ice40tools](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-ice40tools.yml/badge.svg)](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-ice40tools.yml)  | [archfx/ice40tools](https://hub.docker.com/repository/docker/archfx/ice40tools/general) |
 |  andriod | latest  | [![android-latest](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-android.yml/badge.svg)](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-android.yml) | [archfx/android](https://hub.docker.com/repository/docker/archfx/android/general) |
+|  serval | latest  | [![serval](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-serval.yml/badge.svg)](https://github.com/Archfx/docker-decks/actions/workflows/docker-image-serval.yml) | [archfx/serval](https://hub.docker.com/repository/docker/archfx/serval/general) |
 
 </div>
